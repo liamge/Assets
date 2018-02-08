@@ -336,7 +336,10 @@ MonoBehaviour:
   dashStopSpeed: 0.1
   shakeAmount: 0.05
   shakeDuration: 0.3
-  dashEffect: {fileID: 4173434988630516, guid: fbc09758dbffb4611ab1e7491312337b, type: 2}
+  groundDashEffect: {fileID: 4173434988630516, guid: fbc09758dbffb4611ab1e7491312337b,
+    type: 2}
+  airDashEffect: {fileID: 4168358195924798, guid: 79a67c8f40d4c496dbd15e313d5fd66e,
+    type: 2}
 --- !u!114 &823516407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,52 +374,6 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   downButtonFallMultiplier: 1.5
   dustEffect: {fileID: 4790176682235162, guid: d5e93779411f842c5af4c6e3a9a00183, type: 2}
---- !u!1001 &1355037073
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.3292719
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.51153463
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466745458861854, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115150930242494, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-      propertyPath: m_Name
-      value: DirectionDust
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 192932cc5f9d64bd3ae555b85ab7c640, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1720480420
 GameObject:
   m_ObjectHideFlags: 0

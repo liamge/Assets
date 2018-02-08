@@ -13,7 +13,8 @@ public class Dash : MonoBehaviour {
 	[Range(0, 10)]
 	public float shakeDuration;
 
-	public Transform dashEffect;
+	public Transform groundDashEffect;
+	public Transform airDashEffect;
 
 	private PlayerController controller;
 	private Animator anim;
@@ -67,12 +68,20 @@ public class Dash : MonoBehaviour {
 
 		float h = Input.GetAxis ("Horizontal");
 
-		if (h < 0)
-			dashEffect.GetComponent<SpriteRenderer>().flipX = true;
-		else if (h > 0)
-			dashEffect.GetComponent<SpriteRenderer>().flipX = false;
-		
+		if (h < 0) {
+			groundDashEffect.GetComponent<SpriteRenderer> ().flipX = true;
+			airDashEffect.GetComponent<SpriteRenderer> ().flipX = true;
+		} else if (h > 0) {
+			groundDashEffect.GetComponent<SpriteRenderer>().flipX = false;
+			airDashEffect.GetComponent<SpriteRenderer> ().flipX = false;
+		}
+
 		Vector3 newTransform = new Vector3(transform.position.x + xOffset * h, transform.position.y + yOffset, transform.position.z);
-		Instantiate (dashEffect, newTransform, Quaternion.identity);
+		if (controller.grounded)
+			Instantiate (groundDashEffect, newTransform, Quaternion.identity);
+		else {
+			newTransform.y -= 0.2f;
+			Instantiate (airDashEffect, newTransform, Quaternion.identity);
+		}
 	}
 }
